@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - withdraw</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Withdraw crypto or CSGO skins">
+        <meta name="keywords" content="online, gambling, website, withdraw">
+        <meta name="author" content="mb">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/marketStyles.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/withdraw" class="active-page">Withdraw</a></li>
+                    <li><a href="/bonus">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account">user-name</a></li>
+                </ul>
+            </div>
+
+            <div class="window-select">
+                <button class="option-selected" id="switch-crypto">Crypto</button>
+                <button id="switch-cs2">CS2</button>
+            </div>
+
+            <div class="balance-section">
+                <img src="img/icons8-coins-100.png" alt="coins: " class="coin-img-middle"><span id="coins">321</span>
+            </div>
+            
+            <div class="crypto-window">
+                <h1>Withdraw Crypto</h1>
+                <div class="crypto-options">
+                    <div class="crypto-option crypto-option-selected">
+                        <img src="img/btc.png" alt="btc" class="crypto-img">
+                        <div>Bitcoin</div>
+                    </div>
+                    <div class="crypto-option">
+                        <img src="img/ltc.png" alt="ltc" class="crypto-img">
+                        <div>Litecoin</div>
+                    </div>
+                    <div class="crypto-option">
+                        <img src="img/eth.png" alt="eth" class="crypto-img">
+                        <div>Ethereum</div>
+                    </div>
+                </div>
+                <div class="crypto-wallet">
+                    <h2>Coin: <span class="selected-coin">Bitcoin</span></h2>
+                    <h2>Network: <span class="selected-network">Bitcoin</span></h2>
+                    <input type="text" placeholder="Your wallet address" class="dark-input margin-right-20">
+                    <input tye="number" placeholder="Amount of coins to withdraw" class="dark-input margin-right-20">
+                    <button class="dark-btn">Withdraw</button>
+                </div>
+                <div class="amount-calculator">
+                    <!-- currently this feature may be a bit complicated for the user but it'll be simplified later -->
+                    <h2>Enter amount to calculate the rates</h2>
+
+                    <div class="calculator-option">
+                        <input type="text" placeholder="coins" class="coins-input dark-input">
+                        <br/>
+                        <button class="calculate-coins grey-btn">Calculate based on coins</button>
+                    </div>
+
+                    <div class="calculator-option">
+                        <input type="text" placeholder="crypto" class="crypto-input dark-input">
+                        <br/>
+                        <button class="calculate-crypto grey-btn">Calculate based on crypto</button>
+                    </div>
+                    
+                    <div class="calculator-option">
+                        <input type="text" placeholder="USD" class="usd-input dark-input">
+                        <br/>
+                        <button class="calculate-usd grey-btn">Calculate based on USD</button>
+                    </div>
+
+                </div>
+                <div class="crypto-transaction-history">
+                    <h2>Transaction history</h2>
+                    <table>
+                        <tr>
+                            <th>transaction id</th>
+                            <th>Coin name</th>
+                            <th>Exchange rate</th>
+                            <th>Withdraw address</th>
+                            <th>Amount</th>
+                            <th>Coins amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>Bitcoin</td>
+                            <td>1 BTC = 34678 USD</td>
+                            <td>12839ybn0918n230</td>
+                            <td>0.000235</td>
+                            <td>10000</td>
+                            <td>10/30/2023 8:30 PM</td>
+                            <td>Finished</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cs2-window">
+
+                <h1>Withdraw CS2 skins</h1>
+                <div class="deposit-cs2-message">Your account isn't connected to steam. To connect your account to your steam account go to your account options</div>
+
+                <div class="sorting">
+                    <p>Sort by price:</p>
+                    <select>
+                        <option>High to low</option>
+                        <option>Low to high</option>
+                    </select>
+                    <button class="grey-btn">Sort</button>
+                </div>
+
+                <div class="market-listings">
+                    <div class="steam-item">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000 coins</div>
+                    </div>
+                    <div class="steam-item">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000 coins</div>
+                    </div>
+                    <div class="steam-item">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000 coins</div>
+                    </div>
+                    <div class="steam-item">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000 coins</div>
+                    </div>
+                    <div class="steam-item">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000 coins</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- those windows will be hidden by default -->
+
+            <div class="disable-background">
+
+                <div class="confirm-buy small-window">
+                    <h2>Do you want to buy this item?</h2>
+                    <h3>item name</h3>
+                    <img src="img/skin.png" alt="item name" class="item-img-big">
+                    <h3>1000 coins</h3>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn margin-right-20">Nah, I don't want it</button>
+                        <button class="green-btn">Buy</button>
+                    </div>
+                </div>
+
+                <div class="waiting small-window">
+                    <h2>Waiting for <a href="link-to-steam-page">Pietrek</a> to accept your request...</h2>
+                    <h2>Your request was rejected</h2>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="seller-accepted small-window">
+                    <h2><a href="link-to-steam-page">Pietrek</a> has accepted your request</h2>
+                    <h3>Wait for the seller to send the item</h3>
+    
+                    <div class="item-window">
+                        <h3>item name</h4>
+                            <img src="img/skin.png" alt="item name" class="item-img">
+                            <h3>123 coins</h4>
+                    </div>
+    
+                    <h2>Time left: 5 minutes</h2>
+                    <!-- show this after 3 minutes have passed -->
+                    <h3>Click the button if you haven't received the item</h3>
+                    <div class="">
+                        <button class="red-btn margin-bottom-20">I haven't received the item (lock account)</button>
+                        <button class="green-btn">I have received the item (coins will be deducted from your balance)</button>
+                    </div>
+                </div>
+
+                <div class="confirm-withdraw small-window">
+                    <h1>Confirm withdraw</h1>
+                    <h2>Are you sure you want to withdraw <span class="withdraw-amount">123</span> coins?</h2>
+                    <h3>
+                        <span class="withdraw-amount">123</span> coins = <span class="withdraw-amount-usd">$0.123</span> = <span class="withdraw-amount-crypto">0.00123</span> crypto
+                    </h3>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn margin-right-20">Cancel</button>
+                        <button class="green-btn">Withdraw</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

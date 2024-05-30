@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - account</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Your account page on casino">
+        <meta name="keywords" content="casino, gambling, account, crypto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/accountStyles.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/withdraw">Withdraw</a></li>
+                    <li><a href="/bonus">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account" class="active-page">user-name</a></li>
+                </ul>
+            </div>
+
+            <div class="account-wrapper">
+
+                <h1>Account settings</h1>
+
+                <div class="section-select">
+                    <button class="green-btn">General settings</button>
+                    <button class="grey-btn">Security</button>
+                    <button class="grey-btn">Bets history</button>
+                </div>
+
+                <div class="settings-section general-section">
+                    <h2>General</h2>
+    
+                    <img src="img/player.png" alt="user name profile picture">
+                    <br/>
+                    <img src="img/icons8-pencil-48.png" alt="change profile picture" class="change-pfp-img">
+                    <br/>
+    
+                    <label for="display-name">Display name:</label>
+                    <input type="text" id="display-name" value="user-name">
+                    <button class="grey-btn">Save</button>
+                    <br/>
+    
+                    Your id: <span class="user-id">mndu213nedy128o12nhe</span>
+                    <br/>
+    
+                    Steam ID: <span class="steam-id">h7990h190289dh12f</span>
+                    <br/>
+                    
+                    Your coins: <span class="user-coins">666</span>
+                    <br/>
+    
+                    Rank: <span class="user-rank">Normal user</span>
+                    <br/>
+    
+                    Date of registration: <span class="user-register-date">1/12/2023 1:21 PM</span>
+                    <br/>
+    
+                    <!-- only show this field if the account is banned -->
+                    <span class="user-banned">This account is banned*</span>
+                    <br/>
+    
+                    <!-- only show this field if the account is muted -->
+                    <span class="user-muted">This account is muted from chat*</span>
+                    <br/>
+    
+                    <!-- only show this field if the account is locked -->
+                    <span class="user-locked">This account has locked deposit/withdrawal*</span>
+    
+                </div>
+    
+                <div class="settings-section security-section">
+                    <h2>Security</h2>
+    
+                    <label for="user-login">Login: </label>
+                    <input type="text" id="user-login" value="user-login">
+                    <button class="grey-btn">Save</button>
+                    <br/>
+    
+                    <label for="user-email">Email: </label>
+                    <input type="text" id="user-email" value="useremail@email.com">
+                    <button class="grey-btn">Save</button>
+                    <br/>
+    
+                    <button class="grey-btn">Change password</button>
+                </div>
+    
+                <div class="settings-section history-section">
+                    <h2>Bets history</h2>
+                    <table>
+                        <tr>
+                            <th>Color</th>
+                            <th>Bet amount</th>
+                            <th>Date</th>
+                            <th>Result number</th>
+                            <th>Result color</th>
+                            <th>Round hash</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Red</td>
+                            <td>250</td>
+                            <td>1/12/2023 1:00 PM</td>
+                            <td>5</td>
+                            <td>Red</td>
+                            <td>bd8t12781098nu1809uysd189ysd912 <i>verify icon</i></td>
+                            <th>not finished</th>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="disable-background">
+
+                <div class="change-pass small-window">
+                    <h2>Change password</h2>
+                    <form method="POST" action="/changepass" id="change-pass-form">
+                        <label for="old-pass">Enter your current password:</label>
+                        <input type="password" id="old-pass">
+                        <label for="new-pass1">Enter a new password:</label>
+                        <input type="password" id="new-pass1">
+                        <label for="new-pass2">Confirm new password:</label>
+                        <input type="password" id="new-pass2">
+                        <input type="submit" value="Change password">
+                    </form>
+
+                    <div class="window-buttons-bottom">
+                        <button class="grey-btn">Close window</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

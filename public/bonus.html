@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - bonus</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Page with free coins, bonus codes and referrals">
+        <meta name="keywords" content="cs2green, free, coins">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/bonusStyles.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/withdraw">Withdraw</a></li>
+                    <li><a href="/bonus" class="active-page">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account">user-name</a></li>
+                </ul>
+            </div>
+
+            <div class="rewards-wrapper">
+
+                <h1>Rewards</h1>
+                <h2>Free coins every day, referral rewards and giveaways!</h2>
+    
+                <div class="rewards">
+    
+                    <div class="reward">
+                        <h1>Daily coins</h1>
+
+                        <div class="centered-section">
+                            <img src="img/icons8-coins-100.png" alt="coins: " class="coin-img-middle"><span id="daily-reward">666</span>
+                            <div class="level">Level -1</div>
+                        </div>
+
+                        <div class="bottom-section">
+                            <button class="reward-button" id="daily-btn">03:24:58</button>
+                        </div>
+                    </div>
+    
+                    <div class="reward">
+                        <h1>Referrals</h1>
+                        <img src="img/icons8-people-96.png" alt="referrals: " class="referral-img"><span id="referrals-amount">1024</span>
+                        <div class="margin-bottom-20"></div>
+                        <img src="img/icons8-coins-100.png" alt="coins: " class="coin-img-middle"><span id="referrals-reward">512</span>
+                        <div class="bottom-section2">
+                            <button class="reward-button" id="referral-btn">Nothing to claim</button>
+                        </div>
+                    </div>
+    
+                    <div class="reward">
+                        <h1>Giveaway</h1>
+                        <h2>Some weapon</h2>
+                        <img src="img/skin.png" alt="some weapon name" class="item-img">
+                        <div class="margin-bottom-20"></div>
+                        <button class="reward-button" id="giveaway-id">Join</button>
+                    </div>
+    
+                    <div class="reward">
+                        <h1>Giveaway</h1>
+                        <h2>Some other weapon</h2>
+                        <img src="img/skin.png" alt="some other weapon name" class="item-img">
+                        <div class="margin-bottom-20"></div>
+                        <button class="reward-button" id="giveaway-id-2">Already joined</button>
+                    </div>
+    
+                </div>
+    
+                <h3>Your referral code</h3>
+                <form class="referral-form" method="POST" action="/update-referral">
+                    <input type="text" placeholder="your referral code" value="SHREK" id="referral-code">
+                    <input type="submit" value="Update" class="red-btn">
+                </form>
+    
+                <div class="small-info">You get <span class="green-text">50</span> coins for every referral and the referral gets <span class="green-text">1000</span> coins for using your code</div>
+
+            </div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

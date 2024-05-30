@@ -1,0 +1,492 @@
+/* variables */
+:root{
+    --dark: #161616;
+    --lessdark: #222;
+    --evenlessdark: #333;
+    --normalgreen: rgb(34 155 18);
+    --dimgreen: rgb(29 93 16);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    color: #eee;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    min-height: 98vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    background-color: var(--lessdark);
+    margin-bottom: 30px;
+}
+
+.menu > ul{
+    list-style-type: none;
+}
+
+.menu > ul > li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.menu > ul > li > a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+}
+
+/* styling for main page */
+
+.chat{
+    background-color: var(--lessdark);
+    margin-left: 20px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 15px;
+    height: 600px;
+    position: relative;
+    float: left;
+}
+
+.chat-info-bar{
+    background-color: #262626;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.sm-green-dot{
+    background-color:chartreuse;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.messages{
+    max-height: 450px;
+    overflow: scroll;
+}
+
+.messages::-webkit-scrollbar{
+    display: none;
+}
+
+.message{
+    margin-bottom: 15px;
+}
+
+.message-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.message-username{
+    font-weight: bold;
+}
+
+.chat-form{
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+}
+
+#form-chat{
+    display: none;
+}
+
+.chat-input{
+    background-color: #444;
+    color: #eee;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.chat-input:focus{
+    outline: none;
+}
+
+.chat-input-btn{
+    background-color:limegreen;
+    color: #eee;
+    height: 40px;
+    width: 75px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.chat-input-btn:hover{
+    cursor: pointer;
+    background-color: rgb(42, 170, 42);
+}
+
+.chat-login{
+    text-align: center;
+}
+
+.game{
+    float: left;
+    background-color: var(--lessdark);
+    margin: auto 40px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1300px;
+}
+
+.timer{
+    background-color: #444;
+    border-radius: 10px;
+    color: #ddd;
+    margin-bottom: 15px;
+    height: 30px;
+    position: relative;
+}
+
+.timer-filling{
+    background-color: rgb(183, 40, 68);
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.timer-text{
+    position: absolute;
+    left: 45%;
+    top: 5px;
+}
+
+.roulette{
+    overflow: hidden;
+}
+
+.roulette-bar{
+    background-color: #eee;
+    width: 5px;
+    height: 110px;
+    position: absolute;
+    left: 1125px;
+    z-index: 50;
+}
+
+.roulette-tiles{
+    min-width: 6900px;
+    position: relative;
+    right: 230px;
+}
+
+.roulette-tile{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 350%;
+    display: inline-block;
+}
+
+.red-roulette-tile{
+    background-color:rgb(189, 50, 77);
+    border: 5px solid rgb(132, 37, 56);
+}
+
+.black-roulette-tile{
+    background-color:#111;
+    border: 5px solid #2c2c2c;
+}
+
+.green-roulette-tile{
+    background-color:rgb(42, 170, 42);
+    border: 5px solid rgb(33, 134, 33);
+}
+
+.history{
+    margin: 20px auto;
+}
+
+.history-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 200%;
+    display: inline-block;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.history-circle:hover{
+    cursor: pointer;
+}
+
+.history-red{
+    background-color: rgb(189, 50, 77);
+}
+
+.history-red:hover{
+    background-color: rgb(156, 40, 63);
+}
+
+.history-green{
+    background-color: rgb(42, 170, 42);
+}
+
+.history-green:hover{
+    background-color: rgb(35, 139, 35);
+}
+
+.history-black{
+    background-color: #111;
+}
+
+.history-black:hover{
+    background-color: #141414;
+}
+
+.balance{
+    border: 2px solid #222;
+    width: 200px;
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.bet{
+    margin: 10px 0;
+}
+
+.bet-input{
+    width: 300px;
+    font-size: 22px;
+    background-color: #444;
+    padding: 5px;
+    color: #eee;
+    border-radius: 10px;
+}
+
+.bet-input:focus{
+    outline: none;
+}
+
+.bet-buttons{
+    margin: 10px 0;
+}
+
+.bet-buttons > button{
+    width: 75px;
+    height: 40px;
+    background-color: #444;
+    color: #eee;
+    font-size: 20px;
+    border: 2px solid #222;
+    border-radius: 10px;
+    margin-right: 5px;
+    transition: border 0.3s;
+}
+
+.bet-buttons > button:hover{
+    cursor: pointer;
+    border: 2px solid #eee;
+}
+
+.bet-columns{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bet-column{
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    
+}
+
+.bet-column > button{
+    width: 400px;
+    color: #eee;
+    height: 45px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.bet-column > button:hover{
+    cursor: pointer;
+}
+
+.bet-amount{
+    background-color: var(--evenlessdark);
+    width: 400px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: #ddd;
+    box-sizing: border-box;
+}
+
+.bet-players{
+    background-color: var(--evenlessdark);
+    width: 400px;
+    min-height: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.red-column > button{
+    background-color: rgb(189, 50, 77);
+}
+
+.red-column > button:hover{
+    background-color: rgb(143, 34, 56);
+}
+
+.player{
+    margin-bottom: 15px;
+}
+
+.player-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.player-name{
+    font-size: 18px;
+    display: inline-block;
+}
+
+.player-amount{
+    margin-left: 65%;
+    font-size: 18px;
+    color: rgb(42, 170, 42);
+}
+
+.green-column > button{
+    background-color: rgb(42, 170, 42);
+}
+
+.green-column > button:hover{
+    background-color:rgb(31, 132, 31);
+}
+
+.black-column{
+    margin-right: 0 !important;
+}
+
+.black-column > button{
+    background-color: #111;
+}
+
+.black-column > button:hover{
+    background-color: #141414;
+}
+
+.footer{
+    padding: 20px;
+    position: absolute;
+    bottom: -100px;
+}
+
+.footer-icon{
+    width: 30px;
+    vertical-align: middle;
+}
+
+.footer-link{
+    margin-left: 20px;
+}
+
+hr{
+    border-color: var(--evenlessdark);
+}
+
+.round-info{
+    display: none;
+}
+
+.player-info-div{
+    display: none;
+}
+
+.countdown{
+    text-align: center;
+    font-size: 20px;
+}
+
+.socials{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.coin-img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.coin-img-middle{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.total-bet-amount{
+    font-size: 18px;
+}
+
+.balance-section{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+#coins{
+    font-size: 22px;
+}
+
+/* test menu */
+/* delete after testing is done */
+
+.test-menu{
+    background-color: #222;
+    min-height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid rgb(42, 170, 42);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.test-menu > h1{
+    text-align: center;
+}
+
+/* end of test menu */

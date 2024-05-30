@@ -1,0 +1,99 @@
+.rewards-wrapper{
+    margin-left: 20px;
+}
+
+.rewards{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.reward{
+    display: inline-block;
+    border: 2px solid rgb(18, 142, 18);
+    border-radius: 10px;
+    margin-right: 50px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin-top: 25px;
+    vertical-align: middle;
+}
+
+.item-img{
+    width: 200px;
+    vertical-align: middle;
+}
+
+#daily-reward{
+    font-size: 20px;
+}
+
+.centered-section{
+    position: relative;
+    top: 20%;
+}
+
+.bottom-section{
+    position: relative;
+    bottom: -150px;
+}
+
+.bottom-section2{
+    position: relative;
+    bottom: -55px;
+}
+
+.level{
+    color: grey;
+}
+
+.reward-button{
+    width: 150px;
+    height: 40px;
+    border: 2px solid rgb(17, 121, 17);
+    background-color: #0d380d;
+    color: #eee;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.reward-button:hover{
+    cursor: pointer;
+    background-color:#104910;
+}
+
+.referral-img{
+    vertical-align: middle;
+}
+
+#referrals-amount{
+    font-size: 20px;
+}
+
+#referrals-reward{
+    font-size: 20px;
+}
+
+.small-info{
+    margin-top: 10px;
+}
+
+.green-text{
+    color:rgb(18, 175, 18);
+}
+
+.referral-form > input[type=text]{
+    border: 0;
+    border-bottom: 2px solid rgb(18, 142, 18);
+    width: 200px;
+    height: 30px;
+    background-color: var(--evenlessdark);
+    color: #eee;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 15px;
+}

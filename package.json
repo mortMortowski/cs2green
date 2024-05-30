@@ -1,0 +1,26 @@
+{
+  "name": "casino",
+  "version": "1.0.0",
+  "description": "This website is an online casino made by me. It's main game mode is classic roulette. At the beginning the layout of this website will be similar to csgo polygon. It'll use HTML, CSS, JavaScript, probably React, mongoDB and Node. The first version of this website focuses on design, styles and some simple JavaScript. In the later versions more things will be added like React to keep it as a single page website, mongoDB to store user data like login, password or date of signup and Node for generating numbers, giving awards and keeping the website safe. It's currently illegal to play on online gambling sites so deposits and withdrawals will be disabled and the only way to obtain coins will be to get free coins, sign up or change the data in the database.",
+  "main": "script.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie": "^0.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^10.2.0",
+    "mongoose": "^7.6.3",
+    "socket.io": "^4.7.2"
+  }
+}

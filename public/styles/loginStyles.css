@@ -1,0 +1,94 @@
+.form-wrapper{
+    background-color: var(--evenlessdark);
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form-wrapper-reg{
+    width: 500px;
+    height: 475px;
+    left: calc(35% - 250px);
+    top: calc(50% - 237.5px);
+    display: inline-block;
+}
+
+.login-input{
+    width: 70%;
+    border-bottom: 5px solid rgba(66, 68, 90, 1);
+    background-color: var(--evenlessdark);
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #eee;
+    font-size: 20px;
+    left: 10px;
+    position: relative;
+}
+
+#login{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    left: 35px;
+}
+
+input[type=submit]{
+    width: 220px;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 110px);
+    background-color:rgb(66, 68, 90);
+    color: #ddd;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color:rgb(59, 61, 80);
+}
+
+h2{
+    text-align: center;
+}
+
+.small-text{
+    font-size: 12px;
+}
+
+a{
+    color: #eee;
+}
+
+#login-reg{
+    left: 40px;
+}
+
+#email{
+    left: 87px;
+}
+
+#pass1{
+    left: 65px;
+}
+
+.dark-box{
+    display: inline-block;
+    position: absolute;
+    right: 400px;
+    bottom: 350px;
+}
+
+.dark-box > ul > li{
+    font-size: 18px;
+    line-height: 200%;
+}

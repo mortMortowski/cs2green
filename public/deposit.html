@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - deposit</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Deposit crypto or CSGO skins">
+        <meta name="keywords" content="online, gambling, website, deposit">
+        <meta name="author" content="mb">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/marketStyles.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit" class="active-page">Deposit</a></li>
+                    <li><a href="/withdraw">Withdraw</a></li>
+                    <li><a href="/bonus">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account">user-name</a></li>
+                </ul>
+            </div>
+
+            <div class="window-select">
+                <button class="option-selected" id="switch-crypto">Crypto</button>
+                <button id="switch-cs2">CS2</button>
+            </div>
+
+            <div class="balance-section">
+                <img src="img/icons8-coins-100.png" alt="coins: " class="coin-img-middle"><span id="coins">123</span>
+            </div>
+            
+            <div class="crypto-window">
+                <h1>Deposit Crypto</h1>
+                <div class="crypto-options">
+                    <div class="crypto-option crypto-option-selected" id="crypto-option-btc">
+                        <img src="img/btc.png" alt="btc" class="crypto-img">
+                        <div>Bitcoin</div>
+                        <div class="btc-price">$0</div>
+                    </div>
+                    <div class="crypto-option" id="crypto-option-ltc">
+                        <img src="img/ltc.png" alt="ltc" class="crypto-img">
+                        <div>Litecoin</div>
+                        <div class="ltc-price">$0</div>
+                    </div>
+                    <div class="crypto-option" id="crypto-option-eth">
+                        <img src="img/eth.png" alt="eth" class="crypto-img">
+                        <div>Ethereum</div>
+                        <div class="eth-price">$0</div>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="crypto-wallet">
+                    <h2>Coin: <span class="selected-coin">Bitcoin</span></h2>
+                    <h2>Network: <span class="selected-network">Bitcoin</span></h2>
+                    <button class="dark-btn" id="generate-address">Generate deposit address</button>
+                    <!-- generate this content if the button is clicked -->
+                    <div class="deposit-address-window">
+                        <h3>Send crypto to this address and it'll be credited to your account:</h3>
+                        <span class="crypto-address">crypto address here</span>
+                    </div>
+                </div>
+
+                <div class="amount-calculator">
+                    <h2>Enter amount to calculate the rates</h2>
+                    <div class="calculator-option">
+                        <label for="coins-input">Coins</label>
+                        <br/>
+                        <input type="text" placeholder="coins" class="coins-input dark-input" id="coins-input" onChange='calculateRates("coins")'>
+                    </div>
+
+                    <div class="calculator-option">
+                        <label for="crypto-input" id="crypto-label">Crypto (BTC)</label>
+                        <br/>
+                        <input type="text" placeholder="BTC" class="crypto-input dark-input" id="crypto-input" onChange='calculateRates("crypto")'>
+                    </div>
+
+                    <div class="calculator-option">
+                        <label for="usd-input">USD</label>
+                        <br/>
+                        <input type="text" placeholder="USD" class="usd-input dark-input" id="usd-input" value="1" onChange='calculateRates("usd")'>
+                    </div>
+
+                </div>
+
+                <div class="crypto-transaction-history">
+                    <h2>Transaction history</h2>
+                    <table class="history-table">
+                        <tr>
+                            <th>transaction id</th>
+                            <th>Coin name</th>
+                            <th>Exchange rate</th>
+                            <th>Deposit address</th>
+                            <th>Amount</th>
+                            <th>Coins amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>Bitcoin</td>
+                            <td>1 BTC = 34678 USD</td>
+                            <td>12839ybn0918n230</td>
+                            <td>0.000235</td>
+                            <td>10000</td>
+                            <td>10/30/2023 8:30 PM</td>
+                            <td>Finished</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cs2-window">
+
+                <h1>Deposit CS2 skins</h1>
+                <div class="deposit-cs2-message">Your account isn't connected to steam. To connect your account to your steam account go to your account options</div>
+                <button class="instruction-btn grey-btn">Deposit instruction</button>
+                
+                <!-- the rest of those options will be visible and available if the user has connected the steam account with user account -->
+                
+                <div class="steam-items">
+                    <h2>Your inventory:</h2>
+                    <div class="steam-item steam-item-inv item-id-0">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000</div>
+                    </div>
+                    <div class="steam-item steam-item-inv item-id-1">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000</div>
+                    </div>
+                    <div class="steam-item steam-item-inv item-id-2">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000</div>
+                    </div>
+                    <div class="steam-item steam-item-inv item-id-3">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000</div>
+                    </div>
+                    <div class="steam-item steam-item-inv item-id-4">
+                        <div class="item-name">Some skin</div>
+                        <img src="img/skin.png" alt="item name" class="item-img">
+                        <div class="item-price">1000</div>
+                    </div>
+                </div>
+
+                
+                <!-- put this window on the right -->
+                <div class="user-listings">
+                    <div class="user-listings-options">
+                        <button class="grey-btn grey-btn-selected select-listings">My listings (0)</button>
+                        <button class="grey-btn select-awaitings">Awaiting confirmation (0)</button>
+                    </div>
+
+                    <div class="active-listings">
+                        <h3>Your listings:</h3>
+                        <h4>You don't have any listings</h4>
+                        <div class="listings">
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                            <div class="steam-item">
+                                <div class="item-name">Some skin</div>
+                                <img src="img/skin.png" alt="item name" class="item-img">
+                                <div class="item-price">1000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="awaitings">
+                        <h3>Listings awaiting confirmation: </h3>
+                        <h4>Nothing</h4>
+                        <div class="awaiting-list">
+                            <div class="awaiting">
+                                <img src="img/skin.png" alt="item name" class="item-img-small">
+                                <span class="item-name">Some skin</span>
+                                <span class="item-price">1000</span>
+                            </div>
+                            <div class="awaiting">
+                                <img src="img/skin.png" alt="item name" class="item-img-small">
+                                <span class="item-name">Some skin</span>
+                                <span class="item-price">1000</span>
+                            </div>
+                            <div class="awaiting">
+                                <img src="img/skin.png" alt="item name" class="item-img-small">
+                                <span class="item-name">Some skin</span>
+                                <span class="item-price">1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+
+            </div>
+
+            <!-- those windows will be hidden by default -->
+
+            <div class="disable-background">
+
+                <div class="deposit-confirmation small-window">
+                    <h2>Do you want to deposit this item?</h2>
+                    <h3>item name</h3>
+                    <img src="img/skin.png" alt="item name" class="item-img-big">
+                    <div>Adjust item price</div>
+                    <div class="price-slider">
+                        <input type="range" min="1" max="100" value="50" class="slider margin-right-20">
+                        <button class="grey-btn">Reset</button>
+                    </div>
+                    <div class="item-price">1000 coins</div>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn margin-right-20 close-btn">Close window</button>
+                        <button class="green-btn">Deposit</button>
+                    </div>
+                </div>
+
+                <div class="cancel-listing small-window">
+                    <h2>Do you want to cancel this listing?</h2>
+                    <h3>item name</h3>
+                    <img src="img/skin.png" alt="item name" class="item-img-big">
+                    <div class="item-price">1000 coins</div>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn margin-right-20">Close window</button>
+                        <button class="red-btn">Cancel listing</button>
+                    </div>
+                </div>
+
+                <div class="buyer-found small-window">
+                    <h2>A buyer for your item was found</h2>
+                    <h3><a href="link-to-steam-page" class="buyer-link">Pietrek</a> wants to buy your item</h3>
+                    <h3>item name</h3>
+                    <img src="img/skin.png" alt="item name" class="item-img-big">
+                    <div class="item-price">1000 coins</div>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn margin-right-20">Cancel</button>
+                        <button class="green-btn">Accept</button>
+                    </div>
+                </div>
+
+                <div class="deposit-instruction small-window">
+                    <h2>How to deposit an item</h2>
+                    <ol>
+                        <li>Select item to deposit</li>
+                        <li>When someone wants to buy your item you'll be notified</li>
+                        <li>You can decide if you want to sell this item to this particular buyer</li>
+                        <li>If accepted, you'll have 5 minutes to send the selected item to the buyer</li>
+                        <li>If everything goes right you'll receive your coins</li>
+                        <li>If there's an error or the time has expired you and the buyer will be locked and you'll have to contact support</li>
+                        <li>Make sure to send the right item! If you send the wrong item you won't be refunded!</li>
+                    </ol>
+                    <div class="window-buttons-bottom">
+                        <button class="red-btn close-btn">Close window</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="send-item-info">
+                <!-- link where to send the item, warnings, timer etc. here -->
+            </div>
+
+            <div class="error-window">some content</div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+                <br/>
+                Crypto prices from Coingecko API
+            </div>
+
+        </div>
+    <script src="scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/depositScript.js"></script>
+    </body>
+</html>

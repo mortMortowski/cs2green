@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - Login</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Casino - login page">
+        <meta name="keywords" content="casino, gambling, crypto, login">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/loginStyles.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/withdraw">Withdraw</a></li>
+                    <li><a href="/bonus">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login" class="active-page">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account">user-name</a></li>
+                </ul>
+            </div>
+
+            <div class="form-wrapper">
+                <h2>Welcome to CS2Green!</h2>
+                <form class="login-form" method="POST" action="/login">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" class="login-input" autocomplete="off">
+                    <br/>
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="pass" class="login-input">
+                    <br/>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+
+            <div class="error-window">some content</div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+            </div>
+
+        </div>
+    <script src="scripts/loginScript.js"></script>
+    </body>
+
+</html>

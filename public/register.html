@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>CS2Green - Register</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <meta name="description" content="Casino - register page">
+        <meta name="keywords" content="online, casino, gambling, register">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/universalStyles.css">
+        <link rel="stylesheet" href="styles/loginStyles.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="./img/logo.png" alt="CS2Green" class="logo"></a></li>
+                    <li><a href="/">Roulette</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/withdraw">Withdraw</a></li>
+                    <li><a href="/bonus">Free coins</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register" class="active-page">Register</a></li>
+                    <li class="right-li"><a href="/login">You're not logged in</a></li>
+                    <li class="right-li"><a href="/account">user-name</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="form-wrapper form-wrapper-reg">
+
+                    <h1>Create an account</h1>
+
+                    <form class="register-form" method="POST" action="/register">
+    
+                        <label for="login-reg">Login:</label>
+                        <input type="text" id="login-reg" name="login" class="login-input margin-bottom-20" autocomplete="off">
+                        <br/>
+    
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" class="login-input" autocomplete="off">
+                        <p class="small-text">Username Field is optional. If not specified a login will be displayed instead.</p>
+                        <br/>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="login-input margin-bottom-20">
+                        <br/>
+    
+                        <label for="pass1">Password:</label>
+                        <input type="password" id="pass1" name="pass1" class="login-input margin-bottom-20">
+                        <br/>
+    
+                        <label for="pass2">Confirm password:</label>
+                        <input type="password" id="pass2" name="pass2" class="login-input margin-bottom-20">
+                        <br/>
+                        <!-- captcha here -->
+    
+                        <p>By registering on CS2Green you accept our <a href="/terms">Terms of Service</a></p>
+    
+                        <input type="submit" value="Register" id="submit-form">
+    
+                    </form>
+    
+                </div>
+
+                <div class="dark-box">
+                    <h2>Why register on CS2Green?</h2>
+                    <ul>
+                        <li>Free 1000 coins for new users</li>
+                        <li>100 coins/referral</li>
+                        <li>Daily rewards</li>
+                        <li>Giveaways!</li>
+                        <li>Fair game of roulette</li>
+                        <li>Active support</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="error-window">some content</div>
+
+            <div class="footer">
+                CS2Green &copy; 2023. All rights reserved. <a href="https://www.twitter.com" target="_blank" class="footer-link"><img src="img/icons8-twitter.svg" alt="twitter" class="footer-icon"></a>
+            </div>
+
+        </div>
+
+    <script src="scripts/registerScript.js"></script>
+    </body>
+
+</html>

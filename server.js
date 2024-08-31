@@ -38,7 +38,6 @@ app.get("/", (req, res) => {
     if(siteDisabled){
         res.sendFile("./public/sitedisabled.html", { root: __dirname });
     }else{
-        console.log(req.cookies); //do something with token
         res.sendFile("./public/index.html", { root: __dirname });
     }
 });

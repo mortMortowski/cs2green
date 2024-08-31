@@ -34,6 +34,7 @@ let disableBackground = document.getElementsByClassName("disable-background")[0]
 let errorWindow = document.getElementsByClassName("error-window")[0];
 let roundInfo = document.getElementsByClassName("round-info")[0];
 let playerInfo = document.getElementsByClassName("player-info-div")[0];
+let roulette = document.getElementsByClassName("roulette")[0];
 
 //GLOBAL VARIABLES
 
@@ -248,12 +249,14 @@ function addMessage(img, name, msg){
 
 function addBettor(columnNumber, img, name, amount){
     let playerDiv = document.createElement("div");
+    let playerInfo = document.createElement("div");
     let playerImg = document.createElement("img");
-    let playerName = document.createElement("span");
-    let playerAmount = document.createElement("span");
-    let clearingDiv = document.createElement("div");
+    let playerName = document.createElement("div");
+    let playerAmount = document.createElement("div");
 
     playerDiv.classList.add("player");
+
+    playerInfo.classList.add("player-info");
 
     playerImg.src = img;
     playerImg.alt = name;
@@ -265,12 +268,10 @@ function addBettor(columnNumber, img, name, amount){
     playerAmount.classList.add("player-amount");
     playerAmount.textContent = amount;
 
-    clearingDiv.classList.add("clear");
-
-    playerDiv.appendChild(playerImg);
-    playerDiv.appendChild(playerName);
+    playerDiv.appendChild(playerInfo);
+    playerInfo.appendChild(playerImg);
+    playerInfo.appendChild(playerName);
     playerDiv.appendChild(playerAmount);
-    playerDiv.appendChild(clearingDiv);
 
     if(columnNumber == 0){
         redPlayerList.appendChild(playerDiv);
@@ -362,6 +363,11 @@ function showError(message){
     },5000);
 }
 
+function alignRoulette(){ //call this function on every page resize
+    let rouletteWidth = roulette.offsetWidth;
+    //rouletteTiles.style.right = rouletteWidth - 10% + "px";
+}
+
 //number colors
 //red from 1 to 7
 //black from 8 to 14
@@ -388,3 +394,5 @@ socket.on("roulette time", (time) => {
 socket.on("set roulette time", (time) => {
     updateTimer(time);
 }); //sync server and client timer
+
+alignRoulette();

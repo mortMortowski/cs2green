@@ -52,12 +52,11 @@ body{
 .chat{
     background-color: var(--lessdark);
     margin-left: 20px;
-    width: 400px;
     border-radius: 10px;
     padding: 15px;
-    height: 600px;
+    height: 500px;
     position: relative;
-    float: left;
+    min-width: 25vw;
 }
 
 .chat-info-bar{
@@ -142,12 +141,11 @@ body{
 }
 
 .game{
-    float: left;
     background-color: var(--lessdark);
     margin: auto 40px;
     padding: 20px;
     border-radius: 10px;
-    width: 1300px;
+    min-width: 0;
 }
 
 .timer{
@@ -189,7 +187,7 @@ body{
 .roulette-tiles{
     min-width: 6900px;
     position: relative;
-    right: 230px;
+    right: 548px;
 }
 
 .roulette-tile{
@@ -311,17 +309,19 @@ body{
 .bet-columns{
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .bet-column{
     display: inline-block;
     margin-right: 10px;
-    vertical-align: top;
-    
+    vertical-align: top;   
+    flex-grow: 1; 
 }
 
 .bet-column > button{
-    width: 400px;
+    width: 100%;
     color: #eee;
     height: 45px;
     border-radius: 10px;
@@ -336,7 +336,7 @@ body{
 
 .bet-amount{
     background-color: var(--evenlessdark);
-    width: 400px;
+    width: 100%;
     text-align: center;
     padding: 5px;
     border-radius: 10px;
@@ -347,7 +347,6 @@ body{
 
 .bet-players{
     background-color: var(--evenlessdark);
-    width: 400px;
     min-height: 400px;
     padding: 10px;
     box-sizing: border-box;
@@ -364,23 +363,28 @@ body{
 
 .player{
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-info{
+    display: flex;
+    align-items: center;
 }
 
 .player-img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .player-name{
     font-size: 18px;
-    display: inline-block;
+    margin-left: 5px;
 }
 
 .player-amount{
-    margin-left: 65%;
     font-size: 18px;
     color: rgb(42, 170, 42);
 }
@@ -470,13 +474,27 @@ hr{
     font-size: 22px;
 }
 
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.flex-container{
+    display: flex;
+}
+
 /* test menu */
 /* delete after testing is done */
+
+.test-menu-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 .test-menu{
     background-color: #222;
     min-height: 300px;
-    width: 500px;
     border-radius: 10px;
     padding: 10px;
     border: 2px solid rgb(42, 170, 42);
